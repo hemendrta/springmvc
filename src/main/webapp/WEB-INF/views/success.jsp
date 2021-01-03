@@ -27,9 +27,13 @@
 	
 	<div class="container">
 		
-		<div class="alert alert-success text-center" role="alert"><h5>Hello ${username} ${employee.employeeName}</h5>	<h4>Thanks for registering with us!!!!</h4>
+		<div class="alert alert-success text-center" role="alert"><h5>Hello ${username} ${employee.employeeName} ${candidate.candidateName}</h5>	<h4>Thanks for registering with us!!!!</h4>
 		<br>
-		<h5>Your Email is : ${employee.employeeEmail}</h5>
+		<h5>Your Email is : ${employee.employeeEmail} ${candidate.candidateEmail}</h5>
+		<h5>Your Date of Birth : ${employee.employeeEmail} ${candidate.candidateDob}</h5>
+		<h5>Your Selected Skills : ${employee.employeeEmail} ${candidate.candidateSkills}</h5>
+		<h5>Your Gender : ${employee.employeeEmail} ${candidate.candidateGender}</h5>
+		<h5>Preferred Employment Mode : ${employee.employeeEmail} ${candidate.employmentType}</h5>
 		
 		</div>
 
