@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!doctype html>
@@ -24,6 +25,8 @@
 			<div class="card-body">
 
 				<h4 class="text-center">Form Example - 2</h4>
+				
+				<form:errors path="person.*"/>
 
 				<div>
 
