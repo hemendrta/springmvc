@@ -14,7 +14,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 
-<title>Hello, world!</title>
+<title>Form Example - 1</title>
 </head>
 <body class="bg-secondary">
 
@@ -23,7 +23,7 @@
 		<div class="card mx-auto px-4" style="margin-top:80px; width: 70%">
 			<div class="card-body">
 
-				<h4 class="text-center">Form</h4>
+				<h4 class="text-center">Form Example - 1</h4>
 
 				<div>
 

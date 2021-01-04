@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page isELIgnored="false" %>
+<%@ page isELIgnored="false"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,22 +19,32 @@
 </head>
 <body class="container mt-3">
 
-	<% 
-	
+	<%
 		
-	
 	%>
-	
+
 	<div class="container">
-		
-		<div class="alert alert-success text-center" role="alert"><h5>Hello ${username} ${employee.employeeName} ${candidate.candidateName}</h5>	<h4>Thanks for registering with us!!!!</h4>
-		<br>
-		<h5>Your Email is : ${employee.employeeEmail} ${candidate.candidateEmail}</h5>
-		<h5>Your Date of Birth : ${employee.employeeEmail} ${candidate.candidateDob}</h5>
-		<h5>Your Selected Skills : ${employee.employeeEmail} ${candidate.candidateSkills}</h5>
-		<h5>Your Gender : ${employee.employeeEmail} ${candidate.candidateGender}</h5>
-		<h5>Preferred Employment Mode : ${employee.employeeEmail} ${candidate.employmentType}</h5>
-		
+
+		<div class="alert alert-success text-center" role="alert">
+			<h5>Hello ${username} ${employee.employeeName}
+				${candidate.candidateName} ${person.name }</h5>
+			<h4>Thanks for registering with us!!!!</h4>
+			<br>
+			<h5>Your Email is : ${employee.employeeEmail}
+				${candidate.candidateEmail} ${person.email}</h5>
+			<h5>Your Date of Birth : ${employee.employeeEmail}
+				${candidate.candidateDob}</h5>
+			<h5>Your Selected Skills : ${employee.employeeEmail}
+				${candidate.candidateSkills}</h5>
+			<h5>Your Gender : ${employee.employeeEmail}
+				${candidate.candidateGender}</h5>
+			<h5>Preferred Employment Mode : ${employee.employeeEmail}
+				${candidate.employmentType}</h5>
+			<h5>Preferred Employment Mode : ${employee.employeeEmail}
+				${candidate.employmentType}${person.address.city}</h5>
+			<h5>${person.address.street}</h5>
+			<h5>${person.address.zip}</h5>
+
 		</div>
 
 	</div>
