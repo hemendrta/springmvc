@@ -5,12 +5,15 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -162,6 +165,49 @@ public class ComplexForm {
 			modelAndView.setViewName("fileform");
 		}
 		return modelAndView;
+	}
+
+	/*
+	 * Error handling in spring example. We can handle the error by using the
+	 * tag @ExceptionHandler in this we can specify for which we are sending the
+	 * control over here on this method/handler.
+	 */
+
+	/*
+	 * lets create a mapping to show a demo test page, this will show the test page
+	 * if everything is fine that means if we have no error.
+	 * 
+	 * Now if we have any error in this then we can divert the flow of the
+	 * application to other page.
+	 */
+
+	@RequestMapping("/getTestPage")
+	public ModelAndView getTestPage() {
+
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("test");
+		String name = null;
+		name.length();
+		return modelAndView;
+
+	}
+
+	/*
+	 * In the below we have handled the exception of all types so if there is an
+	 * exception in the above then below mentioned code will run.
+	 * 
+	 * We can send the status code as well for the error which is send by the means
+	 * of @responsestatus
+	 */
+
+	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+	@ExceptionHandler({ Exception.class })
+	public ModelAndView getTestPageErrorHandler() {
+
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("search");
+		return modelAndView;
+
 	}
 
 }
