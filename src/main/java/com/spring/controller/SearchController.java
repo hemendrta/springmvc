@@ -11,7 +11,8 @@ public class SearchController {
 //	handler to show the search page
 	@RequestMapping("/search")
 	public String getSearch() {
-
+		String name = null;
+		name.charAt(2);
 		return "search";
 
 	}
@@ -25,7 +26,7 @@ public class SearchController {
 
 		RedirectView redirectView = new RedirectView();
 		redirectView.setUrl(searchQuery);
-
+		
 		return redirectView;
 
 	}
